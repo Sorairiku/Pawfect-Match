@@ -1,0 +1,144 @@
+.search-box {
+    /* Optional: This will vertically center the .search-pet if needed */
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 20px;
+    max-width: 1200px;
+    padding: 10px;
+}
+
+.search-box .search-pet {
+    display: flex; /* Add this line */
+    justify-content: space-between; /* Add this line */
+    width: 100%;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 2px solid #7A6BBC;
+    padding: 3px;
+    border-radius: 10px;
+}
+
+.search-pet input {
+    /* Remove the absolute position */
+    height: 42px;
+    width: calc(100% - 55px); /* Adjust this according to the width of your button */
+    border: none;
+    padding: 0 13px;
+    outline: none;
+    background: #fff;
+}
+.search-pet .arr{
+    text-align: center;
+    width: 47px;
+    height: 42px;
+    border: none;
+    overflow: none;
+    color: #7A6BBC;
+    background: #fff;
+    cursor: pointer;
+    font-size: 17px;
+    padding: 12px;
+}
+
+.search-pet button {
+    width: 47px;
+    height: 42px;
+    border: none;
+    overflow: none;
+    color: #7A6BBC;
+    background: #fff;
+    cursor: pointer;
+    font-size: 17px;
+}
+.categories {
+    margin: 30px;
+
+}
+.categories h1{
+    color: #7A6BBC;
+}
+.categories .pet-categories{
+    display: flex;
+    justify-content: space-between;
+}
+.pet-categories a{
+    margin-top: 10px;
+    text-decoration: none;
+}
+.pet-categories .pet-types{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #E6E6FA;
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+    margin: 10px 15px;
+}
+.pet-categories .pet-types img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: none;
+}
+
+.pet-categories .pet-types h2{
+    color: #7A6BBC;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.results-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    margin-right: 20px;
+}
+.results-container a{
+    margin-top: 10px;
+    text-decoration: none;
+}
+.details {
+    background: #E6E6FA;
+    border-radius: 10px;
+    width: 300px;
+    height: 330px;
+    padding: 10px;
+    margin: 10px 0 10px 0;
+    cursor: pointer;
+    margin: 10px;
+    overflow: hidden; /* Add this line */
+    text-overflow: ellipsis; /* Add this line */
+    white-space: nowrap; /* Add this line */
+}
+.details img{
+    max-height: 200px;
+    height: auto;
+    width: 100%;
+    border-radius: 10px;
+}
+.details h2{
+    color: #000;
+    font-size: 25px;
+    margin: 10px 0 0 5px;
+    font-weight: bold;
+}
+.details p{
+    color: #000;
+    font-size: 20px;
+    margin: 0 0 0 5px;
+}
+.details span{
+    color: #8B8B8B;
+    font-size: 18px;
+    font-weight: 300;
+    margin: 0 0 10px 5px;
+}
+.details span i{
+    color: #7A6BBC;
+    font-size: 20px;
+}

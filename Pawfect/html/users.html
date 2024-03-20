@@ -1,0 +1,59 @@
+<div class="wrapper">
+    <div class="container-user">
+        <section class="users">
+            <header>
+                <div class="content">
+                    <img src="uploads/<?php echo $image;?>" alt="">
+                    <div class="detailss">
+                        <div class="name">
+                            <span ><?php echo $user_data['fname'] . ' ' . $user_data['lname']; ?></span>
+                            <p><?php echo $user_data['status']?></p>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="search">
+                <span class="text">Select a user to start chat</span>
+                <input type="text" placeholder="Enter name to search...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <div class="users-list" id="users-list"></div>
+        </section>
+    </div>
+</div>
+
+<script>
+const searchBar = document.querySelector(".users .search input"),
+searchBtn = document.querySelector(".users .search button"),
+usersList = document.getElementById('users-list');
+
+searchBtn.onclick = ()=>{
+    searchBar.classList.toggle("active");
+    searchBar.focus();
+    searchBtn.classList.toggle("active");
+}
+
+searchBar.onkeyup = function(e) {
+    fetchUsers(e.target.value);
+}
+
+// Function to fetch users
+function fetchUsers(query) {
+    fetch(`fetch_users.php?q=${query}`)
+    .then(response => response.text())
+    .then(data => {
+        usersList.innerHTML = data;
+    });
+}
+
+// Call fetchUsers function on page load
+fetchUsers('');
+
+let userBtn = document.querySelector(".user-btn");
+    let container = document.querySelector(".container-user");
+
+    userBtn.addEventListener("click", function(e) {
+        e.preventDefault();
+        container.classList.toggle("active"); // Toggle 'active' class
+    });
+</script>

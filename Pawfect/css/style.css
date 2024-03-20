@@ -1,0 +1,466 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Ui CSS */
+
+nav {
+    background-color: #7A6BBC; /* Add background color to the top section */
+    padding: 20px 20%; /* Add padding for better appearance */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 120px;
+    display: flex;
+    position: relative;
+}
+nav .menu li {
+    width: auto;
+    text-align:center;
+    display: flex;
+}
+nav .menu li {
+    list-style: none;
+    display: inline-block;
+    margin: 10px 20px;
+}
+nav .menu li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+.menu-box nav {
+    display: flex;
+    justify-content: space-between; /* Distribute space evenly between the elements */
+    align-items: center; /* Center the items vertically */
+    padding: 10px; /* Add padding around the elements */
+}
+.sub-menu-wrap{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 320px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s;
+    z-index: 999;
+}
+.sub-menu-wrap.open-menu{
+    max-height: 600px;
+}
+.sub-menu{
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+    border: 1px solid #7A6BBC;
+    font-family: monospace;
+}
+.user-info{
+    display: flex;
+    align-items: center; /* Center the items vertically */
+}
+.user-info h3{
+    font-weight: 500;
+}
+.sub-menu hr{
+    border: 0;
+    height: 1px;
+    width: 100%;
+    background: #ccc;
+    margin: 15px 0 10px;
+}
+.sub-menu-link{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #000000;
+    margin: 12px 0;
+}
+
+.sub-menu-link .paw{
+    width: 57px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #e5e5e5;
+    margin-right: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+.sub-menu-link .paw i{
+    color: #555555;
+}
+
+.sub-menu-link p{
+    width: 100%;
+}
+.sub-menu-link img{
+    width: 40px;
+    background: #e5e5e5;
+    border-radius: 50%;
+    padding: 8px;
+    margin-right: 15px;
+}
+.sub-menu-link span{
+    font-size: 18px;
+    transition: transform 0.5s;
+}
+.sub-menu-link:hover span{
+    transform: translate(5px);
+}
+.sub-menu-link:hover p{
+    font-weight: 600;
+}
+.bg-bottom {
+    position: fixed;
+    bottom: -100px;
+    left: 0;
+    width: 100%;
+    text-align: center; /* Center the content horizontally */
+    z-index: -1; /* Ensure the background stays behind other content */
+}
+
+.bg-bottom img {
+    width: 100%; /* Ensure the image maintains its aspect ratio */
+    max-height: 1000px; /* Set the maximum height to 200px */
+    display: inline-block; /* Ensure the image is displayed as an inline-block element */
+    vertical-align: bottom; /* Align the image to the bottom */
+}
+.user-info img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 4px solid #7A6BBC;
+    margin-right: 20px;
+}
+.menu-box nav .list {
+    margin: 0 auto; /* Center the list horizontally */
+}
+.menu-box nav .menu {
+    margin-right: auto; /* Push the .menu to the left */
+}
+
+.menu-box nav .user-image {
+    margin-left: 10px; /* Add some space to the left of the user image */
+}
+.logo-image {
+    position: absolute;
+    top: 20px;
+    left: 70px;
+    width: 70px;
+    height: 70px;
+    object-fit: cover; 
+    z-index: 1; 
+}
+.Logo {
+    font-size: 25px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    margin-top: -10px; 
+}
+.user-btn{
+    position: absolute;
+    top: 25px;
+    right: 200px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: white;
+    border: 4px solid #ffffff;
+    box-shadow: 0 10px 60px #E6E6FA;
+}
+.user-btn img{
+    position: absolute;
+    align-items: center;
+    border-radius: 50%;
+    width: 40px;
+    top: 5px;
+    left: 6px;
+}
+
+.user-image {
+    position: absolute;
+    top: 25px;
+    right: 100px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 4px solid #ffffff;
+    box-shadow: 0 10px 60px #E6E6FA;
+}
+.user-image:hover {
+    cursor: pointer;
+}
+.menu {
+    position: absolute;
+    font-family: "monospace", sans-serif;
+    top: 20px;
+    right: 80px;
+    font-size: 15px;
+    color: #000000;
+    text-align: right; /* Align the text to the right */
+    margin-top: 20px;
+    padding: 0; /* Reset padding */
+    list-style: none; /* Remove list styles */
+}
+
+.menu li {
+    display: inline-block; /* Display list items horizontally */
+    margin-left: 10px; /* Add some space between list items */
+}
+
+.menu li a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.menu li a:hover {
+    text-decoration: underline;
+}
+
+.list {
+    padding: 0;
+    margin: 0;
+    font-family: monospace;
+    display: flex; /* Display list items in a row */
+    justify-content: center; /* Center items horizontally */
+    list-style: none;
+    z-index: 99;
+    margin-top: 10px; 
+}
+.list li {
+    display: inline-block;
+    position: relative;
+}
+.list li:last-child {
+    margin-right: 0; /* Remove margin from the last list item */
+}
+.list li a {
+    display: block;
+    padding: 20px 25px;
+    color: #FFFFFF;
+    text-decoration: none;
+    text-align: center;
+    font-size: 20px;
+}
+.list li:hover .Petdropdown {
+    display: block; /* Show the dropdown menu on hover */
+}
+
+.Petdropdown {
+    display: none;
+    position: absolute;
+    background: #7A6BBC;
+    width: 198px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 99;
+    margin: 0; /* Reset margin */
+    padding: 0; /* Reset padding */
+}
+
+.Petdropdown li a {
+    display: block;
+    padding: 20px 78px; /* Adjust the padding as needed */
+    width: 100%;
+}
+.logo-text {
+    position: absolute;
+    top: 40px;
+    left: 150px;
+    color: #ffffff;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    font-family: monospace;
+}
+.top-oval {
+    position: absolute;
+    margin-top: 10px;
+    width: 700px; 
+    height: 100px; 
+    left: 50%; /* Align the left edge of the oval with the center of the viewport */
+    transform: translateX(-50%); /* Center the oval horizontally */
+    z-index: 0;
+}
+
+
+/*Users CSS*/
+
+
+
+.center-text {
+    text-align: center;
+    margin-top: 100px; /* Adjust the margin as needed */
+}
+
+.big-text {
+    font-size: 60px;
+    font-weight: bold;
+    /* Add any other styles you want for the big text */
+}
+
+.link-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px; /* Adjust the margin as needed */
+}
+
+.link-button {
+    display: inline-block;
+    margin: 50px;
+    padding: 20px;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    border-radius: 30px;
+    position: relative;
+    border: 2px solid #230B41; /* Add black border */
+    transition: all 0.3s; /* Add transition for smooth effect */
+    width: 350px; /* Adjust as needed */
+    height: 200px;
+}
+
+.link-button:hover {
+    background-color: lavender;
+    transform: scale(1.1); /* Increase size on hover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add shadow effect on hover */
+}
+
+.link-button h1 {
+    margin: 0;
+    text-align: left;
+    font-size: 30px;
+}
+
+.link-button span {
+    display: block;
+    text-align: left;
+    margin-top: 5px;
+    font-size: 15px;
+}
+
+
+.overlap-image {
+    position: absolute;
+    top: -10px;
+    right: -125px; /* Adjust as needed to control the overlap */
+    width: 250px; /* Adjust the width of the image */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 1;
+}
+.arrow {
+    position: absolute;
+    bottom: 30px; /* Adjust distance from bottom */
+    left: 20px; /* Adjust distance from left */
+}
+
+/* Homepage CSS */
+
+.homepage-center-text {
+    text-align: center;
+    margin-top: 50px; /* Adjust the margin as needed */
+}
+
+.homepage-center-text .big-text {
+    display: flex;
+    justify-content: center; /* Align items horizontally at the center */
+    align-items: center; /* Align items vertically at the center */
+    height: 300px; /* Set a fixed height to center vertically */
+}
+.homepage-center-text .big-text .text h1{
+    margin: 0;
+    text-align: left;
+    font-size: 50px;
+    font-weight: 550;
+}
+.homepage-center-text .big-text .text span{
+    display: block;
+    text-align: left;
+    margin-top: 10px;
+    font-size: 30px;
+    font-weight: 300;
+}
+.homepage-center-text .big-text .text a {
+    display: inline-block;
+    text-align: center;
+    margin-right: 500px;
+    background-color: #C8A2C8;
+    padding: 5px 10px;
+    color: #000000;
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 550;
+    text-decoration: none; /* Remove underline */
+    border-radius: 20px; /* Make the background round */
+    cursor: pointer;
+    transition: all 0.3s; /* Add transition for smooth effect */
+
+}
+
+.homepage-center-text .big-text .text a:hover {
+    text-decoration: none;
+    background-color: #7A6BBC;
+    transform: scale(1.1); /* Increase size on hover */
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+}
+
+.homepage-center-text .big-text img{
+    margin-left: 100px;
+}
+.homepage-center-text .link-button{
+    margin-top: 100px;
+    left: -200px;
+}
+
+.link-button {
+    display: inline-block;
+    margin: 50px;
+    padding: 20px;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    border-radius: 30px;
+    position: relative;
+    border: 2px solid #230B41; /* Add black border */
+    transition: all 0.3s; /* Add transition for smooth effect */
+    width: 350px; /* Adjust as needed */
+    height: 200px;
+}
+
+.link-button:hover {
+    background-color: lavender;
+    transform: scale(1.1); /* Increase size on hover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add shadow effect on hover */
+}
+
+.link-button h1 {
+    margin: 0;
+    text-align: left;
+    font-size: 30px;
+}
+
+.link-button span {
+    display: block;
+    text-align: left;
+    margin-top: 5px;
+    font-size: 15px;
+}
+
+
+.overlap-image {
+    position: absolute;
+    top: -10px;
+    right: -125px; /* Adjust as needed to control the overlap */
+    width: 250px; /* Adjust the width of the image */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 1;
+}
+.arrow {
+    position: absolute;
+    bottom: 30px; /* Adjust distance from bottom */
+    left: 20px; /* Adjust distance from left */
+}

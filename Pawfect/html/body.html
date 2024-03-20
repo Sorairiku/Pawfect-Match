@@ -1,0 +1,92 @@
+<body>
+
+    <div class="menu-box">
+        <nav>
+            <a href="index.php" style="text-decoration: none;">
+                <img src="pictures/Paw-Logo.png" alt="Logo" class="logo-image">
+                <div class="logo-text">Pawfect Match</div>
+            </a>
+            <img src="pictures/top.png" alt="oval" class="top-oval">
+            <ul class="list">
+                <li><a href="about.php">About</a></li>
+                <li>
+                    <a href="adopt.php">Pet Categories</a>
+                    <ul class="Petdropdown">
+                        <li><a href="adopt.php?search_query=Dog">Dogs</a></li>
+                        <hr>
+                        <li><a href="adopt.php?search_query=Cats">Cats</a></li>
+                        <hr>
+                        <li><a href="adopt.php?search_query=Bird">Bird</a></li>
+                        <hr>
+                        <li><a href="adopt.php?search_query=Hamster">Hamster</a></li>
+                        <hr>
+                        <li><a href="adopt.php?search_query=Rabbit">Rabbit</a></li>
+                        <hr>
+                        <li><a href="adopt.php?search_query=Fish">Fish</a></li>
+                    </ul>
+                    </a>
+                </li>
+                <li><a href="news.php">News</a></li>
+                <li><a href="contact.php">Contact us</a></li>
+            </ul> 
+            <a href="#" class="user-btn">
+                <img src="pictures/message.png" alt="Button Image">
+            </a>
+            <img src="uploads/<?php echo $image;?>" alt="User Image" class="user-image" onclick="toggleMenu()">
+            <div class="sub-menu-wrap" id="subMenu">
+                <div class="sub-menu">
+                    <div class="user-info">
+                        <img src="uploads/<?php echo $image;?>" class="pfp">
+                        <h3>Hi <?php echo $user_data['fname'] . ' ' . $user_data['lname']; ?>!</h3>
+                    </div>
+                    <hr>
+                    <a href="user_profile.php" class="sub-menu-link">
+                        <img src="images/profile.png">
+                        <p>Profile</p>
+                        <span>></span>
+                    </a>
+                    <a href="settings.php" class="sub-menu-link">
+                        <img src="images/setting.png">
+                        <p>Setting & Privacy</p>
+                        <span>></span>
+                    </a>
+                    <a href="user_pets.php" class="sub-menu-link">
+                        <div class="paw"><i class="fas fa-paw"></i></div>
+                        <p>My Pets</p>
+                        <span>></span>
+                    </a>
+                    <?php
+                    if ($_SESSION['user_id'] == '733270376') {
+                        echo '<a href="database_choice.php" class="sub-menu-link">
+                            <div class="paw"><i class="fas fa-database"></i></div>
+                            <p>Database</p>
+                            <span>></span>
+                        </a>';
+                    }
+                    ?>
+                    <a href="help.php" class="sub-menu-link">
+                        <img src="images/help.png">
+                        <p>Help & Support</p>
+                        <span>></span>
+                    </a>
+                    <a href="logout.php" class="sub-menu-link">
+                        <img src="images/logout.png">
+                        <p>Logout</p>
+                        <span>></span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    
+<script>
+    let subMenu = document.getElementById("subMenu");
+
+    function toggleMenu() {
+        subMenu.classList.toggle("open-menu");
+    }
+</script>
+
+<div class="bg-bottom">
+    <img src="pictures/wave.png">
+</div>

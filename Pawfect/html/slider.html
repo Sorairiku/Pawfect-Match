@@ -1,0 +1,54 @@
+<div class="container-box">
+    <div class="slider">
+        <div class="slides">
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+    
+            <div class="content ad1">
+                <h2>Pet Adoption<br>Made easy</h2>
+                <a href="adopt.php">
+                    <div class="adopt-link">
+                        <span>Adopt now</span>
+                    </div>
+                </a>
+                <img src="pictures/assorted-pets.png" class="img1">
+                <img src="pictures/assorted-pets.png" class="img2">
+            </div>
+            <div class="content ad2" style="background-image: url('pictures/bgad2.png');">
+                <h2>where every pet<br>finds its perfect<br>home.</h2>
+            </div>
+            <div class="content ad3">
+                <h2>Need to find a new<br>home for your pet?</h2>
+                <a href="pet_info.php">
+                    <div class="adoption-link">
+                        <span>Click here to<br>put your pet for<br>adoption.</span>
+                    </div>
+                </a>
+            </div>
+    
+            <div class="nav-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+            </div>
+        </div>
+    
+        <div class="nav-manual">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+        </div>
+    
+    </div>
+    </div>
+    <script>
+        var counter = 2;
+        setInterval(function() {
+            document.getElementById('radio' + counter).checked = true;
+            counter++;
+            if(counter > 3) {
+                counter = 1;
+            }
+        }, 5000);
+    </script>

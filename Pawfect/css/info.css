@@ -1,0 +1,174 @@
+body {
+    font-family: monospace;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+.title {
+    font-size: 30px;
+    font-weight: 500;
+    position: relative;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.title::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10%;
+    transform: translateX(-50%);
+    height: 3px;
+    width: 230px;
+    background: #7A6BBC;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;  /* updated to 100% */
+    max-width: 1200px; /* Adjust max-width to fit your layout */
+    margin: 0 auto; /* Center the container */
+    background: transparent ;
+}
+
+.form-container-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;  /* updated to 100% */
+}
+.left-form, 
+.pet-image-box {
+    display: inline-block;
+}
+
+.left-form {
+    float: left;
+    width: 110%;
+    padding-right: 700px;
+}
+
+.pet-image-box {
+    float: right;
+    width: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transform: translateY(-600px); /* Adjust this value to fit your needs */
+}
+label {
+    font-family: "monospace", sans-serif;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+}
+
+input[type="text"], input[type="date"],input[type="number"], button {
+    width: calc(100% - 20px); /* Adjust input width to accommodate for margin */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 12px 20px;
+    margin-bottom: 16px;
+    font-size: 16px;
+    background-color: #E6E6FA;
+}
+input[type="file"], button {
+    width: calc(100% - 20px); /* Adjust input width to accommodate for margin */
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 12px 20px;
+    margin-bottom: 16px;
+    font-size: 16px;
+}
+.title-container, 
+.submit-container {
+    clear: both;
+    text-align: center;
+    width: 100%;
+}
+
+button {
+    padding: 14px 20px;
+    margin: 8px 0;
+    background-color: lightblue;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    width: 100%; /* Ensure button takes full width */
+}
+
+button:hover {
+    background-color: skyblue;
+    opacity: 0.8;
+}
+select {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #fff;
+    box-sizing: border-box;
+    width: calc(100% - 20px);
+    padding: 12px 20px;
+    margin-bottom: 16px;
+    font-size: 16px;
+    cursor: pointer;
+    appearance: none; /* Remove default arrow */
+    position: relative;
+    background-color: #E6E6FA;
+}
+
+select:focus {
+    outline: none; /* Remove default blue outline */
+}
+
+/* Custom dropdown arrow (Optional) */
+select:after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 12px;
+    background: #ccc;
+    pointer-events: none;
+    border-radius: 0 4px 4px 0;
+}
+.upload-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start */
+}
+.image-preview{
+    border-radius: 50%;
+    width: 200px; 
+    height: 200px; 
+    margin-bottom: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.gender-details span{
+    font-weight: bold;
+    font-size: 15px;
+    margin-left: 10px;
+    color: #000;
+}
+.gender-details input[type="radio"] {
+    margin-right: 5px;
+    margin-bottom: 16px;
+}
+.gender-details input[type="radio"]:checked {
+    background-color: #7A6BBC;
+}
+.gender-details label {
+    align-self: center;
+}
+
+textarea {
+    width: calc(100% - 20px);
+    height: 100px;
+    background-color: #E6E6FA;
+}

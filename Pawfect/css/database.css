@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.table-container {
+    margin: 10px auto;
+    padding: 20px;
+    width: 90%;
+    overflow-x: auto;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0 1em;
+    width: 100%;
+}
+
+table th, table td {
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
